@@ -9,7 +9,7 @@ from scoreboard import Scoreboard
 
 
 def run_game():
-    # 初始化游戏并创建一个屏幕对象
+    # 初始化游戏并创建一个屏幕对象1
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((

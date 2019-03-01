@@ -202,9 +202,14 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship, aliens, 
         check_high_score(stats, sb)
 
     if len(aliens) == 0:
-        # 删除现有的子弹，加快游戏节奏，并新建一群新的外星人
+        # 如果整群外星人都被消灭，就提高一个等级
         bullets.empty()
         ai_settings.increase_speed()
+
+        # 提高等级
+        stats.level += 1
+        sb.prep_level()
+        
         create_fleet(ai_settings, screen, ship, aliens)
 
 
